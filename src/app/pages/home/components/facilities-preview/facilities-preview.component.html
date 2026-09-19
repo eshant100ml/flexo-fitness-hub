@@ -1,0 +1,60 @@
+<section class="facilities-preview">
+
+  <div class="facilities-container">
+
+    <div class="section-heading">
+
+      <div>
+        <p class="eyebrow">TRAIN AT FLEXO</p>
+
+        <h2>
+          BUILT FOR
+          <span>YOUR GRIND.</span>
+        </h2>
+      </div>
+
+      <p class="section-intro">
+        Everything you need to stay focused, train harder,
+        and keep moving forward.
+      </p>
+
+    </div>
+
+    <div class="facility-grid">
+
+      @for (facility of facilities; track facility.number) {
+
+        <article
+  class="facility-card"
+  [style.background-image]="'url(' + facility.image + ')'"
+>
+  <div class="facility-overlay"></div>
+
+  <div class="facility-content">
+
+    <span class="facility-number">
+      {{ facility.number }}
+    </span>
+
+    <div class="facility-arrow">↗</div>
+
+    <h3>{{ facility.title }}</h3>
+
+    <p>{{ facility.description }}</p>
+
+  </div>
+
+</article>
+
+      }
+
+    </div>
+
+    <a class="explore-link" routerLink="/facilities">
+      EXPLORE FACILITIES
+      <span>→</span>
+    </a>
+
+  </div>
+
+</section>

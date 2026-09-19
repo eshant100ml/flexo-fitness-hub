@@ -1,0 +1,269 @@
+.membership-preview {
+  background: var(--flexo-dark);
+  padding: 70px 24px;
+}
+
+.membership-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--flexo-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.section-heading h2 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+.section-intro {
+  max-width: 360px;
+  margin: 0;
+  color: var(--flexo-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   MEMBERSHIP GRID
+========================= */
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* =========================
+   MEMBERSHIP CARD
+========================= */
+
+.membership-card {
+  position: relative;
+  padding: 32px 28px;
+  min-height: 330px;
+
+  background: var(--flexo-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--flexo-border);
+}
+
+/* Featured */
+
+.membership-card.featured {
+  border-color: var(--flexo-blue);
+  box-shadow: 0 0 30px rgba(22, 139, 255, 0.08);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 7px 14px;
+
+  background: var(--flexo-blue);
+  color: #ffffff;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Text */
+
+.plan-duration {
+  margin: 0 0 8px;
+  color: var(--flexo-muted);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.membership-card h3 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.plan-price {
+  margin: 25px 0 12px;
+
+  color: var(--flexo-white);
+
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.plan-description {
+  max-width: 280px;
+  margin: 0;
+
+  color: var(--flexo-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Button */
+
+.plan-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: auto;
+  padding-top: 22px;
+
+  color: var(--flexo-white);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+}
+
+.plan-button span {
+  color: var(--flexo-blue);
+  font-size: 1.2rem;
+
+  transition: transform 0.25s ease;
+}
+
+.plan-button:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================
+   EXPLORE LINK
+========================= */
+
+.explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 30px;
+
+  color: var(--flexo-white);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+}
+
+.explore-link span {
+  color: var(--flexo-blue);
+  font-size: 1.2rem;
+
+  transition: transform 0.25s ease;
+}
+
+.explore-link:hover {
+  color: var(--flexo-blue);
+}
+
+.explore-link:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    min-height: 280px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .membership-preview {
+    padding: 60px 20px;
+  }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .section-intro {
+    margin-top: 20px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .membership-preview {
+    padding: 55px 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 3.2rem;
+  }
+
+  .membership-card {
+    padding: 28px 24px;
+  }
+
+}

@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+/* ================================
+   FLEXO FITNESS HUB
+   Global Styles
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --flexo-black: #05080c;
+  --flexo-dark: #08111a;
+  --flexo-card: #0b1824;
+
+  --flexo-blue: #168bff;
+  --flexo-blue-dark: #006dcc;
+  --flexo-blue-glow: rgba(22, 139, 255, 0.35);
+
+  --flexo-white: #f5f7fa;
+  --flexo-silver: #c8d0d8;
+  --flexo-muted: #8d99a6;
+
+  --flexo-border: rgba(22, 139, 255, 0.28);
+
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Barlow Condensed', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--flexo-black);
+  color: var(--flexo-white);
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

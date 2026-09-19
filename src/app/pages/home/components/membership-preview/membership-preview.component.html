@@ -1,0 +1,74 @@
+<section class="membership-preview">
+
+  <div class="membership-container">
+
+    <div class="section-heading">
+
+      <div>
+        <p class="eyebrow">MEMBERSHIP</p>
+
+        <h2>
+          CHOOSE YOUR
+          <span>COMMITMENT.</span>
+        </h2>
+      </div>
+
+      <p class="section-intro">
+        Find a membership that fits your goals and
+        keep showing up for yourself.
+      </p>
+
+    </div>
+
+    <div class="membership-grid">
+
+      @for (plan of plans; track plan.name) {
+
+        <article
+          class="membership-card"
+          [class.featured]="plan.featured"
+        >
+
+          @if (plan.featured) {
+            <span class="popular-badge">POPULAR</span>
+          }
+
+          <p class="plan-duration">
+            {{ plan.duration }}
+          </p>
+
+          <h3>{{ plan.name }}</h3>
+
+          <div class="plan-price">
+            {{ plan.price }}
+          </div>
+
+          <p class="plan-description">
+            {{ plan.description }}
+          </p>
+
+          <a
+            class="plan-button"
+            routerLink="/contact"
+          >
+            GET STARTED
+            <span>→</span>
+          </a>
+
+        </article>
+
+      }
+
+    </div>
+
+    <a
+      class="explore-link"
+      routerLink="/membership"
+    >
+      VIEW MEMBERSHIP DETAILS
+      <span>→</span>
+    </a>
+
+  </div>
+
+</section>

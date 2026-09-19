@@ -1,0 +1,280 @@
+.footer {
+  background: #03070b;
+  border-top: 1px solid rgba(22, 139, 255, 0.2);
+  padding: 70px 24px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 50px;
+
+  padding-bottom: 55px;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand h2 {
+  margin: 0 0 10px;
+
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.footer-brand h2 span {
+  color: var(--flexo-blue);
+}
+
+.tagline {
+  margin-bottom: 20px;
+
+  color: var(--flexo-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.description {
+  max-width: 300px;
+
+  color: var(--flexo-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h3 {
+  margin: 5px 0 22px;
+
+  color: var(--flexo-white);
+
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+}
+
+.footer-column a,
+.footer-column p {
+  margin: 0 0 11px;
+
+  color: var(--flexo-muted);
+
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: var(--flexo-blue);
+  transform: translateX(3px);
+}
+
+/* =========================
+   HOURS
+========================= */
+
+.footer-column .hours {
+  margin-top: 10px;
+}
+
+.footer-column .hours strong {
+  color: var(--flexo-white);
+  font-weight: 600;
+}
+
+/* =========================
+   DIRECTIONS BUTTON
+========================= */
+
+.footer-cta {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 180px;
+  min-height: 44px;
+
+  margin-top: 10px !important;
+  padding: 0 15px;
+
+  border: 1px solid var(--flexo-blue);
+
+  color: var(--flexo-white) !important;
+
+  font-size: 0.7rem !important;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+.footer-cta span {
+  color: var(--flexo-blue);
+  font-size: 1.1rem;
+}
+
+.footer-cta:hover {
+  background: var(--flexo-blue);
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+.footer-cta:hover span {
+  color: #ffffff;
+}
+
+/* =========================
+   BOTTOM BAR
+========================= */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #68737e;
+
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-bottom p:last-child {
+  color: var(--flexo-silver);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.footer-bottom span {
+  margin: 0 5px;
+  color: var(--flexo-blue);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 55px 20px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand h2 {
+    font-size: 2.6rem;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 17px;
+    font-size: 1.1rem;
+  }
+
+  .footer-column a,
+  .footer-column p {
+    font-size: 0.82rem;
+  }
+
+  .footer-bottom {
+    min-height: auto;
+
+    padding: 22px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+}
+.developer-credit {
+  padding: 14px 0 18px;
+
+  text-align: center;
+
+  color: #4f5a65;
+  font-size: 1.00rem;
+  letter-spacing: 0.8px;
+}
+
+.developer-credit span {
+  color: #ff3b3b;
+}

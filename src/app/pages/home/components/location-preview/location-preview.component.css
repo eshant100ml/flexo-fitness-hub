@@ -1,0 +1,382 @@
+.location-preview {
+  background: var(--flexo-dark);
+  padding: 70px 24px;
+}
+
+.location-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.location-heading {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--flexo-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.location-heading h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.location-heading h2 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+
+/* =========================
+   LOCATION CONTENT
+========================= */
+
+.location-content {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 25px;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: var(--flexo-card);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.info-block {
+  margin-bottom: 28px;
+}
+
+.info-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--flexo-blue);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.info-block h3 {
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.info-block p {
+  color: var(--flexo-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.hours {
+  color: var(--flexo-white);
+  font-weight: 600;
+}
+
+
+/* =========================
+   CONTACT LINKS
+========================= */
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-links a {
+  color: var(--flexo-silver);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--flexo-blue);
+}
+
+
+/* =========================
+   LOCATION BUTTONS
+========================= */
+
+.location-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.location-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 260px;
+  min-height: 48px;
+
+  padding: 0 18px;
+
+  background: var(--flexo-blue);
+  color: #ffffff;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.location-button span {
+  font-size: 1.1rem;
+}
+
+.location-button:hover {
+  transform: translateY(-2px);
+  background: var(--flexo-blue-dark);
+}
+
+.directions-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  min-height: 48px;
+  padding: 0 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  color: var(--flexo-white);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.directions-button span {
+  color: var(--flexo-blue);
+}
+
+.directions-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--flexo-blue);
+  color: var(--flexo-blue);
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+
+  /*
+    The generated map image is 3:2.
+    Keeping the container at the same ratio
+    prevents any cropping.
+  */
+  aspect-ratio: 3 / 2;
+
+  border: 1px solid rgba(22, 139, 255, 0.18);
+  background: #070d13;
+}
+
+.location-map-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  /*
+    Do NOT use cover here.
+    The container and image have the same ratio,
+    so the complete map remains visible.
+  */
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* =========================
+   MAP GET DIRECTIONS
+========================= */
+
+.map-directions-link {
+  position: absolute;
+
+  /*
+    Position of the clickable HTML button
+    over the map artwork.
+  */
+  left: 66%;
+  top: 88%;
+
+  transform: translate(-50%, -50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  width: 300px;
+  min-height: 58px;
+
+  padding: 0 22px;
+
+  border: 1px solid var(--flexo-blue);
+  border-radius: 12px;
+
+  background: rgba(4, 12, 20, 0.94);
+
+  box-shadow:
+    0 0 22px rgba(22, 139, 255, 0.35),
+    inset 0 0 10px rgba(22, 139, 255, 0.08);
+
+  color: var(--flexo-white);
+
+  text-decoration: none;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.map-directions-link span:last-child {
+  color: var(--flexo-blue);
+  font-size: 1.3rem;
+}
+
+.map-directions-link:hover {
+  transform: translate(-50%, -50%) translateY(-3px);
+
+  background: rgba(22, 139, 255, 0.16);
+
+  box-shadow:
+    0 0 30px rgba(22, 139, 255, 0.5),
+    inset 0 0 14px rgba(22, 139, 255, 0.1);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .location-preview {
+    padding: 60px 20px;
+  }
+
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+
+  .location-info {
+    padding: 30px;
+  }
+
+  .map-container {
+    aspect-ratio: 3 / 2;
+  }
+
+  .map-directions-link {
+    left: 66%;
+    top: 88%;
+
+    width: 260px;
+    min-height: 50px;
+
+    padding: 0 18px;
+
+    font-size: 0.7rem;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .location-preview {
+    padding: 55px 16px;
+  }
+
+  .location-heading h2 {
+    font-size: 3.2rem;
+  }
+
+  .location-info {
+    padding: 25px;
+  }
+
+  .location-actions {
+    flex-direction: column;
+  }
+
+  .location-button,
+  .directions-button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .map-container {
+    aspect-ratio: 3 / 2;
+  }
+
+  .map-directions-link {
+    left: 66%;
+    top: 88%;
+
+    width: 205px;
+    min-height: 44px;
+
+    gap: 12px;
+
+    padding: 0 14px;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.9px;
+
+    border-radius: 9px;
+  }
+
+  .map-directions-link span:last-child {
+    font-size: 1.05rem;
+  }
+}

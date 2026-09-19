@@ -1,0 +1,31 @@
+<section class="highlights">
+
+  <div class="highlights-container">
+
+    @for (highlight of highlights; track highlight.label) {
+
+      <div class="highlight-item">
+
+        <div class="highlight-icon">
+          {{ highlight.icon }}
+        </div>
+
+        <div class="highlight-content">
+
+          <strong>
+            {{ highlight.value }}
+          </strong>
+
+          <span>
+            {{ highlight.label }}
+          </span>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>

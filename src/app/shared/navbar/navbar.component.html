@@ -1,0 +1,168 @@
+<nav class="navbar">
+
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <a
+      class="brand"
+      routerLink="/"
+      (click)="closeMenu()"
+    >
+      <img
+        src="images/Flexo-logo.jpeg"
+        alt="FlexO Fitness Hub logo"
+      />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="nav-links">
+
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </a>
+
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+      >
+        About
+      </a>
+
+      <a
+        routerLink="/facilities"
+        routerLinkActive="active"
+      >
+        Facilities
+      </a>
+
+      <a
+        routerLink="/membership"
+        routerLinkActive="active"
+      >
+        Membership
+      </a>
+
+      <a
+        routerLink="/trainers"
+        routerLinkActive="active"
+      >
+        Trainers
+      </a>
+
+      <a
+        routerLink="/gallery"
+        routerLinkActive="active"
+      >
+        Gallery
+      </a>
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="active"
+      >
+        Contact
+      </a>
+
+    </div>
+
+    <!-- Desktop CTA -->
+    <a
+      class="trial-button"
+      routerLink="/contact"
+    >
+      Book Free Trial
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div
+    class="mobile-menu"
+    [class.open]="isMenuOpen"
+  >
+
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeMenu()"
+    >
+      Home
+    </a>
+
+    <a
+      routerLink="/about"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >
+      About
+    </a>
+
+    <a
+      routerLink="/facilities"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >
+      Facilities
+    </a>
+
+    <a
+      routerLink="/membership"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >
+      Membership
+    </a>
+
+    <a
+      routerLink="/trainers"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >
+      Trainers
+    </a>
+
+    <a
+      routerLink="/gallery"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >
+      Gallery
+    </a>
+
+    <a
+      routerLink="/contact"
+      routerLinkActive="active"
+      (click)="closeMenu()"
+    >
+      Contact
+    </a>
+
+    <a
+      class="mobile-trial-button"
+      routerLink="/contact"
+      (click)="closeMenu()"
+    >
+      Book Free Trial
+    </a>
+
+  </div>
+
+</nav>

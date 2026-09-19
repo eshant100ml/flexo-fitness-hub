@@ -1,0 +1,57 @@
+<section class="why-flexo">
+
+  <div class="why-flexo-container">
+
+    <div class="section-heading">
+      <p class="eyebrow">WHY FLEXO</p>
+
+      <h2>
+        MORE THAN
+        <span>JUST A GYM.</span>
+      </h2>
+
+      <p class="intro">
+        Your fitness journey deserves the right environment,
+        the right mindset, and a place that keeps you moving forward.
+      </p>
+    </div>
+
+    <div class="why-flexo-content">
+
+      <div class="why-flexo-list">
+
+        @for (point of points; track point.number) {
+          <article class="why-point">
+
+            <div class="point-number">
+              {{ point.number }}
+            </div>
+
+            <div class="point-content">
+              <h3>{{ point.title }}</h3>
+              <p>{{ point.description }}</p>
+            </div>
+
+          </article>
+        }
+
+      </div>
+
+      <div class="why-flexo-quote">
+        <span class="quote-mark">“</span>
+
+        <p>
+          FROM THE FIRST REP
+          <span>TO THE FINAL FLEX.</span>
+        </p>
+
+        <div class="quote-line"></div>
+
+        <small>FLEXO FITNESS HUB</small>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
