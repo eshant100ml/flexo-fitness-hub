@@ -36,8 +36,8 @@ jobs:
           echo "Checking Angular build output..."
           ls -la
           ls -la dist
-          ls -la dist/flexo-fitness-hub
-          test -f dist/flexo-fitness-hub/index.html
+          ls -la dist/flexo-fitness-hub/browser
+          test -f dist/flexo-fitness-hub/browser/index.html
 
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
@@ -46,7 +46,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_MEADOW_0115AA010 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
-          app_location: dist/flexo-fitness-hub
+          app_location: dist/flexo-fitness-hub/browser
           skip_app_build: true
 
   close_pull_request_job:
