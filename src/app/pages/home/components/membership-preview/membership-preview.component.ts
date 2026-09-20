@@ -21,20 +21,20 @@ export class MembershipPreviewComponent {
     {
       name: 'Monthly',
       duration: '1 Month',
-      price: '₹1000',
+      price: '₹1500 - ₹2000',
       description: 'Flexible membership for your fitness journey.'
     },
     {
       name: 'Quarterly',
       duration: '3 Months',
-      price: '₹2700',
+      price: '₹4000 - ₹5500',
       description: 'Stay consistent and keep your momentum going.',
       featured: true
     },
     {
       name: 'Half Yearly',
       duration: '6 Months',
-      price: '₹5000',
+      price: '₹7500 - ₹10000',
       description: 'A longer commitment to a stronger you.'
     }
   ];

@@ -1,1 +1,137 @@
-<p>facilities works!</p>
+<section class="facilities-page">
+
+  <!-- Hero -->
+  <section class="facilities-hero">
+    <div class="facilities-container">
+
+      <p class="eyebrow">TRAIN AT FLEXO</p>
+
+      <h1>
+        BUILT FOR
+        <span>YOUR GRIND.</span>
+      </h1>
+
+      <p class="hero-description">
+        A focused training environment with the space
+        and equipment to keep you moving forward.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- Facilities -->
+  <section class="facilities-list">
+
+    <div class="facilities-container">
+
+      <div class="section-heading">
+        <p class="eyebrow">WHAT WE OFFER</p>
+
+        <h2>
+          TRAIN
+          <span>YOUR WAY.</span>
+        </h2>
+      </div>
+
+
+      <div class="facility-grid">
+
+        @for (facility of facilities; track facility.number) {
+
+          <article class="facility-card">
+
+            <div class="facility-image">
+              <img
+                [src]="facility.image"
+                [alt]="facility.title + ' at FlexO Fitness Hub'"
+              />
+
+              <div class="image-overlay"></div>
+
+              <span class="facility-number">
+                {{ facility.number }}
+              </span>
+            </div>
+
+            <div class="facility-content">
+
+              <h3>{{ facility.title }}</h3>
+
+              <p>
+                {{ facility.description }}
+              </p>
+
+            </div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Training Mindset -->
+  <section class="training-section">
+
+    <div class="facilities-container">
+
+      <div class="training-content">
+
+        <p class="eyebrow">THE FLEXO MINDSET</p>
+
+        <h2>
+          SHOW UP.
+          <span>PUT IN THE WORK.</span>
+        </h2>
+
+        <p>
+          Whatever your fitness goal, consistency is where
+          progress begins. Come in, train hard, and keep
+          moving forward.
+        </p>
+
+        <a
+          class="primary-button"
+          routerLink="/contact"
+        >
+          BOOK A FREE TRIAL
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Bottom CTA -->
+  <section class="facilities-cta">
+
+    <div class="facilities-container">
+
+      <p class="eyebrow">READY TO TRAIN?</p>
+
+      <h2>
+        YOUR NEXT
+        <span>WORKOUT STARTS HERE.</span>
+      </h2>
+
+      <a
+        class="secondary-button"
+        routerLink="/contact"
+      >
+        GET IN TOUCH
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </section>
+
+</section>

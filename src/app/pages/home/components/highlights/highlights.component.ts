@@ -17,7 +17,7 @@ export class HighlightsComponent {
   highlights: Highlight[] = [
     {
       icon: '👥',
-      value: '300+',
+      value: '1000+',
       label: 'Happy Members'
     },
     {

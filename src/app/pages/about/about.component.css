@@ -1,0 +1,375 @@
+.about-page {
+  background: var(--flexo-black);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.about-hero {
+  padding: 110px 24px 90px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(22, 139, 255, 0.12),
+      transparent 35%
+    ),
+    var(--flexo-black);
+}
+
+.about-hero .about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+
+  color: var(--flexo-blue);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.about-hero h1 {
+  margin: 0 0 25px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(4.5rem, 9vw, 8rem);
+  line-height: 0.83;
+
+  text-transform: uppercase;
+}
+
+.about-hero h1 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+.hero-description {
+  max-width: 620px;
+
+  color: var(--flexo-muted);
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.about-section {
+  padding: 80px 24px;
+
+  background: var(--flexo-dark);
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.section-heading h2,
+.environment-content h2,
+.philosophy-section h2,
+.about-cta h2 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 0.9;
+
+  text-transform: uppercase;
+}
+
+.section-heading h2 span,
+.environment-content h2 span,
+.philosophy-section h2 span,
+.about-cta h2 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+/* =========================
+   APPROACH
+========================= */
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.approach-card {
+  padding: 35px;
+
+  min-height: 230px;
+
+  background: var(--flexo-card);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.approach-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(22, 139, 255, 0.4);
+}
+
+.approach-card > span {
+  display: block;
+
+  margin-bottom: 35px;
+
+  color: var(--flexo-blue);
+
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+}
+
+.approach-card h3 {
+  margin-bottom: 12px;
+
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.approach-card p {
+  color: var(--flexo-muted);
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   ENVIRONMENT
+========================= */
+
+.environment-section {
+  padding: 90px 24px;
+
+  background: var(--flexo-black);
+}
+
+.environment-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 55px;
+
+  align-items: center;
+}
+
+.environment-image {
+  overflow: hidden;
+
+  border: 1px solid rgba(22, 139, 255, 0.2);
+}
+
+.environment-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.environment-image:hover img {
+  transform: scale(1.03);
+}
+
+.environment-content h2 {
+  margin-bottom: 25px;
+}
+
+.environment-content > p:not(.eyebrow) {
+  margin-bottom: 18px;
+
+  color: var(--flexo-muted);
+
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  min-height: 48px;
+
+  margin-top: 12px;
+  padding: 0 18px;
+
+  background: var(--flexo-blue);
+
+  color: #ffffff;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-button:hover {
+  background: var(--flexo-blue-dark);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy-section {
+  padding: 90px 24px;
+
+  background: var(--flexo-dark);
+
+  text-align: center;
+}
+
+.philosophy-section .about-container {
+  max-width: 900px;
+}
+
+.philosophy-section h2 {
+  margin-bottom: 30px;
+}
+
+.philosophy-line {
+  width: 70px;
+  height: 2px;
+
+  margin: 0 auto 25px;
+
+  background: var(--flexo-blue);
+}
+
+.philosophy-section > .about-container > p:last-child {
+  color: var(--flexo-muted);
+
+  font-size: 0.95rem;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.about-cta {
+  padding: 90px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 139, 255, 0.14),
+      transparent 60%
+    ),
+    var(--flexo-black);
+}
+
+.about-cta h2 {
+  max-width: 800px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .about-hero {
+    padding: 80px 20px 70px;
+  }
+
+  .about-section,
+  .environment-section,
+  .philosophy-section,
+  .about-cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .environment-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+  .about-hero {
+    padding: 65px 16px 55px;
+  }
+
+  .about-section,
+  .environment-section,
+  .philosophy-section,
+  .about-cta {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .about-hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .section-heading h2,
+  .environment-content h2,
+  .philosophy-section h2,
+  .about-cta h2 {
+    font-size: 3.4rem;
+  }
+
+  .approach-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .environment-grid {
+    gap: 30px;
+  }
+
+  .about-button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+}

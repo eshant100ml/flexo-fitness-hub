@@ -1,1 +1,156 @@
-<p>membership works!</p>
+<section class="membership-page">
+
+  <!-- Hero -->
+  <section class="membership-hero">
+
+    <div class="membership-container">
+
+      <p class="eyebrow">MEMBERSHIP</p>
+
+      <h1>
+        CHOOSE YOUR
+        <span>COMMITMENT.</span>
+      </h1>
+
+      <p class="hero-description">
+        Find a membership that fits your goals,
+        stay consistent, and keep showing up.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="plans-section">
+
+  <div class="membership-container">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">FLEXO MEMBERSHIPS</p>
+
+      <h2>
+        PICK YOUR
+        <span>PLAN.</span>
+      </h2>
+
+    </div>
+
+
+    <div class="plans-grid">
+
+      @for (plan of plans; track plan.name) {
+
+        <article
+          class="plan-card"
+          [class.featured]="plan.featured"
+        >
+
+          @if (plan.featured) {
+            <div class="popular-badge">
+              POPULAR
+            </div>
+          }
+
+          <p class="plan-duration">
+            {{ plan.duration }}
+          </p>
+
+          <h3>
+            {{ plan.name }}
+          </h3>
+
+
+          <div class="price-row">
+
+            <div class="price-option">
+              <span>STRENGTH</span>
+
+              <strong>
+                {{ plan.strengthPrice }}
+              </strong>
+            </div>
+
+
+            <div class="price-option">
+              <span>STRENGTH + CARDIO</span>
+
+              <strong>
+                {{ plan.cardioPrice }}
+              </strong>
+            </div>
+
+          </div>
+
+
+          <p class="plan-description">
+            {{ plan.description }}
+          </p>
+
+          <div class="plan-divider"></div>
+
+          <a
+  class="plan-button"
+  href="https://wa.me/919012185379?text=Hi%20FlexO%20Fitness%20Hub!%20I%27m%20interested%20in%20your%20membership%20plans.%20Please%20share%20the%20details."
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GET STARTED <span>→</span>
+</a>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- Membership CTA -->
+  <section class="membership-cta">
+
+    <div class="membership-container">
+
+      <p class="eyebrow">NOT SURE WHERE TO START?</p>
+
+      <h2>
+        LET'S FIND THE
+        <span>RIGHT FIT.</span>
+      </h2>
+
+      <p>
+        Have questions about membership?
+        Get in touch with FlexO and find out which
+        option works for you.
+      </p>
+
+      <div class="cta-buttons">
+
+        <a
+          class="primary-button"
+          routerLink="/contact"
+        >
+          CONTACT FLEXO
+          <span>→</span>
+        </a>
+
+        <a
+          class="secondary-button"
+          href="https://wa.me/919012185379"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WHATSAPP
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>

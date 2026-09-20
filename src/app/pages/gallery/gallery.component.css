@@ -1,0 +1,482 @@
+.gallery-page {
+  background: var(--flexo-black);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   COMMON
+========================= */
+
+.eyebrow {
+  margin-bottom: 14px;
+
+  color: var(--flexo-blue);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.gallery-hero {
+  padding: 110px 24px 90px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(22, 139, 255, 0.12),
+      transparent 35%
+    ),
+    var(--flexo-black);
+}
+
+.gallery-hero h1 {
+  margin: 0 0 25px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(4.5rem, 9vw, 8rem);
+  line-height: 0.83;
+
+  text-transform: uppercase;
+}
+
+.gallery-hero h1 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+.hero-description {
+  max-width: 620px;
+
+  color: var(--flexo-muted);
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section {
+  padding: 85px 24px;
+
+  background: var(--flexo-dark);
+}
+
+.section-heading {
+  margin-bottom: 45px;
+}
+
+.section-heading h2,
+.instagram-content h2,
+.gallery-cta h2 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 0.9;
+
+  text-transform: uppercase;
+}
+
+.section-heading h2 span,
+.instagram-content h2 span,
+.gallery-cta h2 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+/* =========================
+   IMAGE SHOWCASE
+========================= */
+
+.gallery-showcase {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  width: 100%;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.gallery-image-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(700px, 75vw);
+  height: 500px;
+
+  padding: 12px;
+
+  background: #03070b;
+
+  border: 1px solid rgba(22, 139, 255, 0.25);
+
+  box-shadow:
+    0 0 35px rgba(22, 139, 255, 0.08);
+
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  transition: opacity 0.35s ease;
+}
+
+/* =========================
+   CAPTION
+========================= */
+
+.image-caption {
+  position: absolute;
+
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+
+  padding: 30px 18px 14px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(3, 7, 11, 0.9),
+      transparent
+    );
+
+  color: var(--flexo-white);
+
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   ARROWS
+========================= */
+
+.gallery-arrow {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  background: rgba(5, 8, 12, 0.9);
+
+  border: 1px solid rgba(22, 139, 255, 0.35);
+
+  color: var(--flexo-white);
+
+  font-size: 1.4rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gallery-arrow:hover {
+  background: var(--flexo-blue);
+
+  border-color: var(--flexo-blue);
+
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+/* =========================
+   DOTS
+========================= */
+
+.gallery-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 22px;
+}
+
+.gallery-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #46515c;
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease;
+}
+
+.gallery-dot.active {
+  width: 24px;
+
+  border-radius: 10px;
+
+  background: var(--flexo-blue);
+}
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram-section {
+  padding: 90px 24px;
+
+  background: var(--flexo-black);
+}
+
+.instagram-content {
+  max-width: 750px;
+}
+
+.instagram-content h2 {
+  margin-bottom: 25px;
+}
+
+.instagram-content > p:not(.eyebrow) {
+  max-width: 580px;
+
+  margin-bottom: 30px;
+
+  color: var(--flexo-muted);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.instagram-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  min-height: 50px;
+
+  padding: 0 20px;
+
+  border: 1px solid rgba(22, 139, 255, 0.45);
+
+  color: var(--flexo-white);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.instagram-button span {
+  color: var(--flexo-blue);
+
+  font-size: 1.1rem;
+}
+
+.instagram-button:hover {
+  background: rgba(22, 139, 255, 0.1);
+
+  border-color: var(--flexo-blue);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CTA
+========================= */
+
+.gallery-cta {
+  padding: 90px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 139, 255, 0.14),
+      transparent 60%
+    ),
+    var(--flexo-dark);
+}
+
+.gallery-cta h2 {
+  max-width: 800px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.primary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  min-height: 50px;
+
+  padding: 0 20px;
+
+  background: var(--flexo-blue);
+
+  color: #ffffff;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.primary-button:hover {
+  background: var(--flexo-blue-dark);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .gallery-hero {
+    padding: 80px 20px 70px;
+  }
+
+  .gallery-section,
+  .instagram-section,
+  .gallery-cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .gallery-image-wrapper {
+    width: min(650px, 78vw);
+    height: 450px;
+  }
+
+  .gallery-showcase {
+    gap: 15px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .gallery-hero {
+    padding: 65px 16px 55px;
+  }
+
+  .gallery-section,
+  .instagram-section,
+  .gallery-cta {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .section-heading h2,
+  .instagram-content h2,
+  .gallery-cta h2 {
+    font-size: 3.4rem;
+  }
+
+  .gallery-showcase {
+    gap: 8px;
+  }
+
+  .gallery-image-wrapper {
+    width: calc(100% - 70px);
+    height: 390px;
+
+    padding: 8px;
+  }
+
+  .gallery-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.1rem;
+  }
+
+  .image-caption {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+
+    padding: 25px 12px 10px;
+
+    font-size: 1rem;
+  }
+
+  .instagram-button,
+  .primary-button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+}

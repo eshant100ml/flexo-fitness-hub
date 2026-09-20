@@ -1,0 +1,366 @@
+.facilities-page {
+  background: var(--flexo-black);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.facilities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.facilities-hero {
+  padding: 110px 24px 90px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(22, 139, 255, 0.12),
+      transparent 35%
+    ),
+    var(--flexo-black);
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+
+  color: var(--flexo-blue);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.facilities-hero h1 {
+  margin: 0 0 25px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(4.5rem, 9vw, 8rem);
+  line-height: 0.83;
+
+  text-transform: uppercase;
+}
+
+.facilities-hero h1 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+.hero-description {
+  max-width: 620px;
+
+  color: var(--flexo-muted);
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   FACILITIES LIST
+========================= */
+
+.facilities-list {
+  padding: 85px 24px;
+
+  background: var(--flexo-dark);
+}
+
+.section-heading {
+  margin-bottom: 45px;
+}
+
+.section-heading h2,
+.training-content h2,
+.facilities-cta h2 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 0.9;
+
+  text-transform: uppercase;
+}
+
+.section-heading h2 span,
+.training-content h2 span,
+.facilities-cta h2 span {
+  display: block;
+  color: var(--flexo-blue);
+}
+
+/* =========================
+   FACILITY GRID
+========================= */
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.facility-card {
+  overflow: hidden;
+
+  background: var(--flexo-card);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(22, 139, 255, 0.4);
+}
+
+.facility-image {
+  position: relative;
+  overflow: hidden;
+
+  aspect-ratio: 4 / 3;
+}
+
+.facility-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.facility-card:hover .facility-image img {
+  transform: scale(1.04);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(5, 8, 12, 0.65),
+      transparent 55%
+    );
+}
+
+.facility-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  background: rgba(5, 8, 12, 0.8);
+
+  border: 1px solid rgba(22, 139, 255, 0.5);
+
+  color: var(--flexo-blue);
+
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+.facility-content {
+  padding: 28px;
+}
+
+.facility-content h3 {
+  margin-bottom: 12px;
+
+  font-family: var(--font-heading);
+  font-size: 2rem;
+
+  text-transform: uppercase;
+}
+
+.facility-content p {
+  color: var(--flexo-muted);
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   TRAINING SECTION
+========================= */
+
+.training-section {
+  padding: 90px 24px;
+
+  background: var(--flexo-black);
+}
+
+.training-content {
+  max-width: 850px;
+}
+
+.training-content h2 {
+  margin-bottom: 25px;
+}
+
+.training-content > p:not(.eyebrow) {
+  max-width: 650px;
+
+  margin-bottom: 30px;
+
+  color: var(--flexo-muted);
+
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  min-height: 50px;
+
+  padding: 0 20px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.primary-button {
+  background: var(--flexo-blue);
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: var(--flexo-blue-dark);
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: var(--flexo-white);
+}
+
+.secondary-button:hover {
+  border-color: var(--flexo-blue);
+  color: var(--flexo-blue);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BOTTOM CTA
+========================= */
+
+.facilities-cta {
+  padding: 90px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 139, 255, 0.14),
+      transparent 60%
+    ),
+    var(--flexo-dark);
+}
+
+.facilities-cta h2 {
+  max-width: 850px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .facilities-hero {
+    padding: 80px 20px 70px;
+  }
+
+  .facilities-list,
+  .training-section,
+  .facilities-cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .facility-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .facilities-hero {
+    padding: 65px 16px 55px;
+  }
+
+  .facilities-list,
+  .training-section,
+  .facilities-cta {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .facilities-hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .section-heading h2,
+  .training-content h2,
+  .facilities-cta h2 {
+    font-size: 3.4rem;
+  }
+
+  .facility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facility-content {
+    padding: 25px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 270px;
+  }
+
+}
